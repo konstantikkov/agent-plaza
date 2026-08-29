@@ -1,0 +1,1 @@
+export { RemoteAvatars } from './RemoteAvatars';
