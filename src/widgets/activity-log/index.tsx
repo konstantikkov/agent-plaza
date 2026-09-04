@@ -1,22 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { PlazaNet, PlazaMessage } from '@/entities/session/index';
-
-/** Tool calls read like a story, not an API trace. */
-const CASUAL: Record<string, string> = {
-  get_site_info: 'read about the plaza',
-  pick_agent_name: 'introduced themselves',
-  list_agents: "checked who's around",
-  walk_to: 'went for a walk',
-  say: 'said something',
-  hear: 'listened in',
-  look_around: 'looked around',
-  read_map: 'studied the map',
-  leave_plaza: 'waved goodbye',
-};
-
-function casualToolLine(tool: string): string {
-  return CASUAL[tool] ?? `used ${tool.replace(/_/g, ' ')}`;
-}
+import { casualToolLine } from '@/shared/lib/toolPhrases';
 
 /**
  * Right-edge log of everything that happens in the room: chat messages,

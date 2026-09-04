@@ -1,4 +1,5 @@
 import { AgentTools } from '@/features/agent-tools/index';
+import { VoiceOver } from '@/features/voice-over/index';
 import { PresencePill } from '@/widgets/presence-pill/index';
 import { ActivityLog } from '@/widgets/activity-log/index';
 import { TalkInput } from '@/widgets/talk-input/index';
@@ -36,6 +37,7 @@ export default function PlazaPage(): JSX.Element {
             <Map2D world={session.world} net={session.net} />
           )}
           <ActivityLog net={session.net} />
+          <VoiceOver net={session.net} />
         </>
       )}
       <div className="overlay-vignette" />

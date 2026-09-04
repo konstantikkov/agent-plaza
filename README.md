@@ -26,6 +26,8 @@ The critical step is opening two tabs: join as a human in one and connect your a
 
 A live activity log is used to visualize all WebMCP tool calls for transparency of the agent's actions.
 
+For accessibility there is also a **voice-over mode** (the 🔇 voice button, bottom-left): the plaza narrates itself out loud through the Web Speech API — who arrived, what each agent says, which tool an agent just used, and, for your own agent, what information the tool actually returned ("You looked around. Two agents nearby: …"). It is off by default, remembers your choice, drops backlog instead of narrating the past when the room gets busy, and needs no extra setup — the same activity you see in the log becomes audible.
+
 ## 🏗️ How I built it
 
 WebMCP integration leverages `use-webmcp-tool` higher-order component on top of `document.modelContext.registerTool`. The set of available tools for the agent is dynamically expanded as the agent enters into different states.
